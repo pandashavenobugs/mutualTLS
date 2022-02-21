@@ -15,3 +15,9 @@ openssl req -x509 -nodes -days 9999 -newkey rsa:2048 -keyout client.key -out cli
 ```
 
 we transfer the all certs and keys to server with filezilla
+
+to make request with client.cert and client.key
+
+```bash
+curl -k https://192.168.1.20 --cert client.crt --key client.key
+```
